@@ -2,11 +2,10 @@ package com.bridgelabz.facebook.generic;
 
 public interface IAutoConstant {
 
-    String CONFIG_PATH = "./config.properties";
-    String EXCEL_PATH = "./testdata/data.xlsx";
+    String CONFIG_PATH = "/home/admin1/FaceBookTestWithSelenium/src/test/resources/config.properties";
+    String EXCEL_PATH = "/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/files/facebook.xlsx";
     String GECKO_KEY = "webdriver.gecko.driver";
-    String GECKO_VALUE = "./Driver/geckodriver";
+    String GECKO_VALUE = "/home/admin1/FaceBookTestWithSelenium/Driver/geckodriver";
     String CHROME_KEY = "webdriver.chrome.driver";
-    String CHROME_VALUE = "./Driver/chromedriver";
-
+    String CHROME_VALUE = "/home/admin1/FaceBookTestWithSelenium/Driver/chromedriver";
 }
