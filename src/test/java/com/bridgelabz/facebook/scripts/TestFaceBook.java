@@ -29,9 +29,9 @@ public class TestFaceBook extends BaseTest {
 
         Library config = new Library();
 
-        facebookLoginPage.setEmail("7030493048");
+        facebookLoginPage.setEmail("<>");
         //   Thread.sleep(2000);
-        facebookLoginPage.setPassword("lucky143");
+        facebookLoginPage.setPassword("<>");
         //    Thread.sleep(2000);
         facebookLoginPage.clickLogin();
         Thread.sleep(3000);
