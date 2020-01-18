@@ -1,24 +1,38 @@
 package com.bridgelabz.facebook.scripts;
 
 import com.bridgelabz.facebook.generic.BaseTest;
-import com.bridgelabz.facebook.generic.IAutoConstant;
 import com.bridgelabz.facebook.generic.Library;
+import com.bridgelabz.facebook.pompages.FacebookChangeProfilePic;
 import com.bridgelabz.facebook.pompages.FacebookHomePage;
 import com.bridgelabz.facebook.pompages.FacebookLoginPage;
 import com.bridgelabz.facebook.pompages.FacebookLogout;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 
-import static com.bridgelabz.facebook.generic.IAutoConstant.EXCEL_PATH;
+import static com.bridgelabz.facebook.generic.IAutoConstant.CONFIG_PATH;
 
-
+//u@Listeners(CustomerListener.class)
 public class TestFaceBook extends BaseTest {
+
+    @Test
+    public void ScreenShot() throws IOException {
+        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
+        facebookLoginPage.setEmail("usahu998@gmail.com");
+        facebookLoginPage.setPassword("123456");
+        facebookLoginPage.clickLogin();
+
+    }
 
     @Test
     public void testFaceBookLogin() throws InterruptedException, AWTException {
@@ -29,9 +43,9 @@ public class TestFaceBook extends BaseTest {
 
         Library config = new Library();
 
-        facebookLoginPage.setEmail("<>");
+        facebookLoginPage.setEmail(config.getProperty(CONFIG_PATH,"username"));
         //   Thread.sleep(2000);
-        facebookLoginPage.setPassword("<>");
+        facebookLoginPage.setPassword(config.getProperty(CONFIG_PATH,"password"));
         //    Thread.sleep(2000);
         facebookLoginPage.clickLogin();
         Thread.sleep(3000);
@@ -66,6 +80,72 @@ public class TestFaceBook extends BaseTest {
         Thread.sleep(3000);
 
         facebookHomePage.postBottom();
+    }
+
+    @Test
+    public void testCaptureScreenshotFacebookPage() throws IOException {
+
+        Date date = new Date();
+        String date1 = date.toString();
+        System.out.println(date1);
+        String date2 = date1.replaceAll(":", "_");
+        System.out.println(date2);
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot/" + date2 + "__actiTIMELoginPage.png");
+        FileUtils.copyFile(srcFile,destFile);
+    }
+
+    @Test
+    public void testUploadProfilePicture() throws InterruptedException, AWTException {
+        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
+        FacebookLogout facebookLogout = new FacebookLogout(driver);
+        FacebookHomePage facebookHomePage = new FacebookHomePage(driver);
+        FacebookChangeProfilePic facebookChangeProfilePic = new FacebookChangeProfilePic(driver);
+
+        Library config = new Library();
+
+        facebookLoginPage.setEmail(config.getProperty(CONFIG_PATH,"username"));
+        //   Thread.sleep(2000);
+        facebookLoginPage.setPassword(config.getProperty(CONFIG_PATH,"password"));
+        //    Thread.sleep(2000);
+        facebookLoginPage.clickLogin();
+        Thread.sleep(3000);
+
+        facebookChangeProfilePic.profileClick();
+        Thread.sleep(3000);
+        facebookChangeProfilePic.displayPicClick();
+        Thread.sleep(5000);
+        Robot robot = new Robot();
+        robot.mouseMove(484, 275);
+        Thread.sleep(2000);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(5000);
+
+        for (int j = 1; j < 11; j++) {
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            Thread.sleep(500);
+        }
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(1000);
+        robot.keyPress(KeyEvent.VK_RIGHT);
+        robot.keyRelease(KeyEvent.VK_RIGHT);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(5000);
+
+        facebookChangeProfilePic.profilePostClick();
+        Thread.sleep(5000);
+
+
+
     }
 }
 

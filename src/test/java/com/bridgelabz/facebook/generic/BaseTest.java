@@ -6,6 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -41,19 +42,10 @@ public class BaseTest {
 
     @AfterMethod
     public void close() {
-        /*driver.quit();*/
+            driver.quit();
+        }
+
+
+
     }
 
-    public void takeScreenshot(String testname) {
-        Date d = new Date();
-        String currentdate = d.toString().replaceAll(":", "_");
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-        File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot" + currentdate + "\\" + testname + "_screenshot.png");
-        try {
-            FileUtils.copyFile(srcFile, destFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
