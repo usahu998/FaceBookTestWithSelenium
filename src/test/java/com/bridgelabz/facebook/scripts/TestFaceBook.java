@@ -144,8 +144,6 @@ public class TestFaceBook extends BaseTest {
         facebookChangeProfilePic.profilePostClick();
         Thread.sleep(5000);
 
-
-
     }
 }
 
