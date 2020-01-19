@@ -6,19 +6,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static com.bridgelabz.facebook.generic.IAutoConstant.CHROME_KEY;
-import static com.bridgelabz.facebook.generic.IAutoConstant.CHROME_VALUE;
-
 public class AlertAndPopup extends BaseTest {
-    public static void main(String[] args) {
-        System.getProperty(CHROME_KEY, CHROME_VALUE);
-        WebDriver driver=new ChromeDriver();
+    public static void main(String[] args) throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
         driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
         driver.findElement(By.name("proceed")).click();
-        Alert alert= driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
-        alert.accept();
-        //alert.dismiss();  // is for cancle button
-    }
+        String text = alert.getText();
 
+        if (text.equals("Please enter a valid user name")) {
+            System.out.println("Correct alert Message");
+        } else {
+            System.out.println("Incorrect alert Message");
+        }
+        alert.accept();
+        Thread.sleep(3000);
+        //alert.dismiss();  // is for cancel button
+        driver.close();
+    }
 }
