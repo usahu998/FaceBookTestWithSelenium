@@ -26,15 +26,6 @@ import static com.bridgelabz.facebook.generic.IAutoConstant.CONFIG_PATH;
 public class TestFaceBook extends BaseTest {
 
     @Test
-    public void ScreenShot() throws IOException {
-        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
-        facebookLoginPage.setEmail("usahu998@gmail.com");
-        facebookLoginPage.setPassword("123456");
-        facebookLoginPage.clickLogin();
-
-    }
-
-    @Test
     public void testFaceBookLogin() throws InterruptedException, AWTException {
 
         FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
@@ -92,7 +83,7 @@ public class TestFaceBook extends BaseTest {
         System.out.println(date2);
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot/" + date2 + "__actiTIMELoginPage.png");
+        File destFile = new File("C:\\Users\\user\\IdeaProjects\\FaceBookTestWithSelenium\\src\\test\\java\\com\\bridgelabz\\facebook\\Screenshot\\" + date2 + "_actiTIMELoginPage.png");
         FileUtils.copyFile(srcFile,destFile);
     }
 
@@ -143,7 +134,33 @@ public class TestFaceBook extends BaseTest {
 
         facebookChangeProfilePic.profilePostClick();
         Thread.sleep(5000);
+    }
 
+    @Test
+    public void testDownLoadingImage() throws InterruptedException, AWTException {
+        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
+        Thread.sleep(2000);
+        Robot robot = new Robot();
+        robot.mouseMove(484, 325);
+        Thread.sleep(2000);
+        robot.mousePress(InputEvent.BUTTON3_DOWN_MASK );
+        robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+        Thread.sleep(500);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+        Thread.sleep(500);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+        Thread.sleep(500);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(5000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(5000);
     }
 }
 

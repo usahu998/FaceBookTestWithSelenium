@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.facebook.scripts.TestFaceBook" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-18T10:59:37" hostname="admin" time="0.25">
+<testsuite name="com.bridgelabz.facebook.scripts.TestFaceBook" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-19T13:17:31" hostname="DESKTOP-DSNLESO" time="16.755">
   <properties/>
-  <testcase name="testCaptureScreenshotFacebookPage" classname="com.bridgelabz.facebook.scripts.TestFaceBook" time="0.25"/>
-  <system-out><![CDATA[Sat Jan 18 16:29:37 IST 2020
-Sat Jan 18 16_29_37 IST 2020
-]]></system-out>
+  <testcase name="testDownLoadingImage" classname="com.bridgelabz.facebook.scripts.TestFaceBook" time="16.755"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
