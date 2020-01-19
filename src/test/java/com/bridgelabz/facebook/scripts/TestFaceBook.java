@@ -83,6 +83,7 @@ public class TestFaceBook extends BaseTest {
         System.out.println(date2);
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+      //  File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot/" + date2 + "__actiTIMELoginPage.png");
         File destFile = new File("C:\\Users\\user\\IdeaProjects\\FaceBookTestWithSelenium\\src\\test\\java\\com\\bridgelabz\\facebook\\Screenshot\\" + date2 + "_actiTIMELoginPage.png");
         FileUtils.copyFile(srcFile,destFile);
     }

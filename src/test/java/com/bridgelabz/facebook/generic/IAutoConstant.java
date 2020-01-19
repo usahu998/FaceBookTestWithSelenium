@@ -8,4 +8,9 @@ public interface IAutoConstant {
     String GECKO_VALUE = "./Driver/geckodriver";
     String CHROME_KEY = "webdriver.chrome.driver";
     String CHROME_VALUE = "C:\\Users\\user\\IdeaProjects\\FaceBookTestWithSelenium\\Driver\\chromedriver.exe";
+
+//    String CONFIG_PATH = "/home/admin1/FaceBookTestWithSelenium/src/test/resources/config.properties";
+//    String EXCEL_PATH = "/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/files/facebook.xlsx";
+//    String GECKO_VALUE = "/home/admin1/FaceBookTestWithSelenium/Driver/geckodriver";
+//    String CHROME_VALUE = "/home/admin1/FaceBookTestWithSelenium/Driver/chromedriver";
 }
