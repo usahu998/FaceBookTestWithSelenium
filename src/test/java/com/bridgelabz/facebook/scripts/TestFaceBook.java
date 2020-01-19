@@ -2,10 +2,7 @@ package com.bridgelabz.facebook.scripts;
 
 import com.bridgelabz.facebook.generic.BaseTest;
 import com.bridgelabz.facebook.generic.Library;
-import com.bridgelabz.facebook.pompages.FacebookChangeProfilePic;
-import com.bridgelabz.facebook.pompages.FacebookHomePage;
-import com.bridgelabz.facebook.pompages.FacebookLoginPage;
-import com.bridgelabz.facebook.pompages.FacebookLogout;
+import com.bridgelabz.facebook.pompages.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -161,6 +158,15 @@ public class TestFaceBook extends BaseTest {
         Thread.sleep(5000);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(5000);
+    }
+
+    @Test
+    public void testAutoInputDate() throws AWTException, InterruptedException {
+        FacebookDate facebookDate=new FacebookDate(driver);
+        facebookDate.day();
+        facebookDate.month();
+        facebookDate.year();
         Thread.sleep(5000);
     }
 }

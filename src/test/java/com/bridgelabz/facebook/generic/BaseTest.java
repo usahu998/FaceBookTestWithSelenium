@@ -29,6 +29,7 @@ public class BaseTest {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
+
         driver = new ChromeDriver(options);
         String url = Library.getProperty(CONFIG_PATH, "URL");
         driver.manage().window().maximize();
