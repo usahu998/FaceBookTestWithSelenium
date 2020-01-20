@@ -25,7 +25,7 @@ public class FacebookDate {
     }
 
     public void month() {
-        month.sendKeys("Aud");
+        month.sendKeys("Aug");
     }
 
     public void year() {

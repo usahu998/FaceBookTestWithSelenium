@@ -93,7 +93,7 @@ public class TestFaceBook extends BaseTest {
         FacebookChangeProfilePic facebookChangeProfilePic = new FacebookChangeProfilePic(driver);
 
         Library config = new Library();
-
+        System.out.println(config.getProperty(CONFIG_PATH,"username"));
         facebookLoginPage.setEmail(config.getProperty(CONFIG_PATH,"username"));
         //   Thread.sleep(2000);
         facebookLoginPage.setPassword(config.getProperty(CONFIG_PATH,"password"));
@@ -162,7 +162,7 @@ public class TestFaceBook extends BaseTest {
     }
 
     @Test
-    public void testAutoInputDate() throws AWTException, InterruptedException {
+    public void testAutoInputDate() throws InterruptedException {
         FacebookDate facebookDate=new FacebookDate(driver);
         facebookDate.day();
         facebookDate.month();
