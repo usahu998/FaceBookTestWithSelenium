@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.facebook.scripts.TestFaceBook" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-20T12:45:15" hostname="admin" time="5.313">
+<testsuite name="com.bridgelabz.facebook.scripts.TestFaceBook" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-21T04:52:14" hostname="admin" time="5.291">
   <properties/>
-  <testcase name="testAutoInputDate" classname="com.bridgelabz.facebook.scripts.TestFaceBook" time="5.313"/>
+  <testcase name="testAutoInputDate" classname="com.bridgelabz.facebook.scripts.TestFaceBook" time="5.291"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
