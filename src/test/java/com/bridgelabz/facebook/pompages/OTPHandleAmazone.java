@@ -15,10 +15,10 @@ import static com.bridgelabz.facebook.generic.IAutoConstant.CHROME_KEY;
 import static com.bridgelabz.facebook.generic.IAutoConstant.CHROME_VALUE;
 
 public class OTPHandleAmazone {
-    public static final String ACCOUNT_SID="AC1ca2e21be96b60698bd04864b41d995e";
-    public static final String AUTH_TOKEN="6b1a394e7238c4545fe7947c942fc5c8";
+    public static final String ACCOUNT_SID="AC0da5e5b22cefb3d106bd8ada0cf6275e";
+    public static final String AUTH_TOKEN="dd895cfde90989ccee929be02c96cea6";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
        // WebDriverManager.chromedriver().setup();
         System.setProperty(CHROME_KEY, CHROME_VALUE);
         WebDriver driver=new ChromeDriver();
@@ -31,13 +31,16 @@ public class OTPHandleAmazone {
         driver.findElement(By.id("ap_customer_name")).sendKeys("Upendra Sahu");
         driver.findElement(By.id("auth-country-picker-container")).click();
         driver.findElement(By.linkText("United States +1")).click();
-        driver.findElement(By.id("ap_phone_number")).sendKeys("2512505689");
+        driver.findElement(By.id("ap_phone_number")).sendKeys("4016220124");
         driver.findElement(By.id("ap_password")).sendKeys("TestAutomation@123");
         driver.findElement(By.id("continue")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//input[@id='auth-pv-enter-code']")).sendKeys("smsBody");
 
         Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
         String smsBody = getMessage();
         System.out.println(smsBody);
+
     }
 
 
