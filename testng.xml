@@ -4,10 +4,23 @@
     <test verbose="2" preserve-order="true" name="/home/admin1/selenium/FaceBookTestWithSelenium">
         <classes>
             <class name="com.bridgelabz.facebook.pompages.CrossBrowserScript">
+                <methods>
+                    <include name="testParameterWithXML"/>
+                </methods>
             </class>
             <class name="com.bridgelabz.facebook.pompages.HandleMultipleWindows">
+                <methods>
+                    <include name="testMultipleWindows"/>
+                </methods>
             </class>
             <class name="com.bridgelabz.facebook.scripts.TestFaceBook">
+                <methods>
+                    <include name="testFaceBookLogin"/>
+                    <include name="testCaptureScreenshotFacebookPage"/>
+                    <include name="testUploadProfilePicture"/>
+                    <include name="testDownLoadingImage"/>
+                    <include name="testAutoInputDate"/>
+                </methods>
             </class>
         </classes>
     </test>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="7" passed="0" failed="0" skipped="7">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-01-22T04:31:55Z" name="All Test Suite" finished-at="2020-01-22T04:32:11Z" duration-ms="16410">
+    <groups>
+    </groups>
+    <test started-at="2020-01-22T04:31:55Z" name="/home/admin1/selenium/FaceBookTestWithSelenium" finished-at="2020-01-22T04:32:11Z" duration-ms="16410">
+      <class name="com.bridgelabz.facebook.scripts.TestFaceBook">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:01:55Z" name="setUp" finished-at="2020-01-22T10:02:11Z" duration-ms="16384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.bridgelabz.facebook.pompages.CrossBrowserScript@75881071]" started-at="2020-01-22T10:02:11Z" name="setup" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Configuration on method setup but has not been marked @Optional or defined
+in /home/admin1/selenium/FaceBookTestWithSelenium/testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Configuration on method setup but has not been marked @Optional or defined
+in /home/admin1/selenium/FaceBookTestWithSelenium/testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:197)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:647)
+	at org.testng.TestRunner.run(TestRunner.java:615)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="close" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="testFaceBookLogin()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="testFaceBookLogin" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFaceBookLogin -->
+        <test-method signature="testCaptureScreenshotFacebookPage()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="testCaptureScreenshotFacebookPage" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaptureScreenshotFacebookPage -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="close" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="testUploadProfilePicture()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="testUploadProfilePicture" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUploadProfilePicture -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="close" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="close" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="testAutoInputDate()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="testAutoInputDate" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAutoInputDate -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="close" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="testDownLoadingImage()[pri:0, instance:com.bridgelabz.facebook.scripts.TestFaceBook@4524411f]" started-at="2020-01-22T10:02:11Z" name="testDownLoadingImage" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDownLoadingImage -->
+      </class> <!-- com.bridgelabz.facebook.scripts.TestFaceBook -->
+      <class name="com.bridgelabz.facebook.pompages.HandleMultipleWindows">
+        <test-method signature="testMultipleWindows()[pri:0, instance:com.bridgelabz.facebook.pompages.HandleMultipleWindows@150c158]" started-at="2020-01-22T10:02:11Z" name="testMultipleWindows" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultipleWindows -->
+      </class> <!-- com.bridgelabz.facebook.pompages.HandleMultipleWindows -->
+      <class name="com.bridgelabz.facebook.pompages.CrossBrowserScript">
+        <test-method signature="testParameterWithXML()[pri:0, instance:com.bridgelabz.facebook.pompages.CrossBrowserScript@75881071]" started-at="2020-01-22T10:02:11Z" name="testParameterWithXML" finished-at="2020-01-22T10:02:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParameterWithXML -->
+      </class> <!-- com.bridgelabz.facebook.pompages.CrossBrowserScript -->
+    </test> <!-- /home/admin1/selenium/FaceBookTestWithSelenium -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

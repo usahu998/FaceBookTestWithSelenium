@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test name="/home/admin1/selenium/FaceBookTestWithSelenium(failed)">
+    <classes>
+      <class name="com.bridgelabz.facebook.pompages.CrossBrowserScript">
+        <methods>
+          <include name="testParameterWithXML"/>
+        </methods>
+      </class> <!-- com.bridgelabz.facebook.pompages.CrossBrowserScript -->
+      <class name="com.bridgelabz.facebook.pompages.HandleMultipleWindows">
+        <methods>
+          <include name="testMultipleWindows"/>
+        </methods>
+      </class> <!-- com.bridgelabz.facebook.pompages.HandleMultipleWindows -->
+      <class name="com.bridgelabz.facebook.scripts.TestFaceBook">
+        <methods>
+          <include name="testFaceBookLogin"/>
+          <include name="testUploadProfilePicture"/>
+          <include name="setUp"/>
+          <include name="testCaptureScreenshotFacebookPage"/>
+          <include name="testAutoInputDate"/>
+          <include name="testDownLoadingImage"/>
+        </methods>
+      </class> <!-- com.bridgelabz.facebook.scripts.TestFaceBook -->
+    </classes>
+  </test> <!-- /home/admin1/selenium/FaceBookTestWithSelenium(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
