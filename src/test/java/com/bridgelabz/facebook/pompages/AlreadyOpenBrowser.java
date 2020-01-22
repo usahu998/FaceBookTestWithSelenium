@@ -14,9 +14,10 @@ public class AlreadyOpenBrowser {
     public static void main(String[] args) {
         System.setProperty(CHROME_KEY, CHROME_VALUE);
         ChromeOptions options=new ChromeOptions();
-        options.setExperimentalOption("debuggerAddress","localhost:9100");
+        options.setExperimentalOption("debuggerAddress","127.0.0.1:9018");
         WebDriver driver= new  ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(By.name("auth-continue")).sendKeys("@@@@");
+        driver.get("https://www.google.com/");
+        // google-chrome -remote-debugging-port=9018 --user-data-dir"/home/admin1/Downloads/google-chrome-stable_current_amd64.deb"
     }
 }
