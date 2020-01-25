@@ -11,31 +11,21 @@ repositories {
 }
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-}
-dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
     implementation 'org.testng:testng:6.9.6'
-}
-dependencies {
     compile group: 'org.apache.poi', name: 'poi', version: '3.17'
-
-}
-dependencies {
     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.16'
-}
-dependencies {// https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.7.1'
-}
-dependencies {
-// https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
+    // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
     compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.6'
-}
-
-dependencies {
-// https://mvnrepository.com/artifact/com.twilio.sdk/twilio
+    // https://mvnrepository.com/artifact/com.twilio.sdk/twilio
     compile group: 'com.twilio.sdk', name: 'twilio', version: '7.31.0'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
 }
 
-test{
+test {
     useTestNG()
 }

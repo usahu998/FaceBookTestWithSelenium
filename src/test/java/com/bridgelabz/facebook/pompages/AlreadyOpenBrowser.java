@@ -17,6 +17,8 @@ public class AlreadyOpenBrowser {
         WebDriver driver= new  ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.google.com/");
-        // google-chrome -remote-debugging-port=9018 --user-data-dir"/home/admin1/Downloads/google-chrome-stable_current_amd64.deb"
     }
 }
+
+// Paste it on Terminal with correct chrome Extension
+// google-chrome -remote-debugging-port=9018 --user-data-dir"/home/admin1/Downloads/google-chrome-stable_current_amd64.deb"

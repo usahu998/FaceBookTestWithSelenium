@@ -1,0 +1,4 @@
+2020-01-25 10:18:31,417 ERROR [Test worker] BaseTest:37 - this is an error message
+2020-01-25 10:18:31,422  WARN [Test worker] BaseTest:38 - this is warn message
+2020-01-25 10:18:31,433 DEBUG [Test worker] BaseTest:39 - this is debug message
+2020-01-25 10:18:31,435  INFO [Test worker] BaseTest:40 - this is info message

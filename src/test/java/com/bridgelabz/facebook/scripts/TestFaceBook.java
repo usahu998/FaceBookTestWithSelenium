@@ -19,8 +19,10 @@ import java.util.Date;
 
 import static com.bridgelabz.facebook.generic.IAutoConstant.CONFIG_PATH;
 
-//u@Listeners(CustomerListener.class)
+//@Listeners(CustomerListener.class)
 public class TestFaceBook extends BaseTest {
+
+    FacebookDate facebookDate;
 
     @Test
     public void testFaceBookLogin() throws InterruptedException, AWTException {
@@ -80,23 +82,20 @@ public class TestFaceBook extends BaseTest {
         System.out.println(date2);
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-      //  File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot/" + date2 + "__actiTIMELoginPage.png");
-        File destFile = new File("C:\\Users\\user\\IdeaProjects\\FaceBookTestWithSelenium\\src\\test\\java\\com\\bridgelabz\\facebook\\Screenshot\\" + date2 + "_actiTIMELoginPage.png");
+        File destFile = new File("/home/admin1/FaceBookTestWithSelenium/src/test/java/com/bridgelabz/facebook/Screenshot/" + date2 + "__actiTIMELoginPage.png");
+      //  File destFile = new File("C:\\Users\\user\\IdeaProjects\\FaceBookTestWithSelenium\\src\\test\\java\\com\\bridgelabz\\facebook\\Screenshot\\" + date2 + "_actiTIMELoginPage.png");
         FileUtils.copyFile(srcFile,destFile);
     }
 
     @Test
     public void testUploadProfilePicture() throws InterruptedException, AWTException {
         FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
-        FacebookLogout facebookLogout = new FacebookLogout(driver);
-        FacebookHomePage facebookHomePage = new FacebookHomePage(driver);
         FacebookChangeProfilePic facebookChangeProfilePic = new FacebookChangeProfilePic(driver);
 
-        Library config = new Library();
-        System.out.println(config.getProperty(CONFIG_PATH,"username"));
-        facebookLoginPage.setEmail(config.getProperty(CONFIG_PATH,"username"));
+       // System.out.println(Library.getProperty(CONFIG_PATH,"username"));
+        facebookLoginPage.setEmail(Library.getProperty(CONFIG_PATH,"username"));
         //   Thread.sleep(2000);
-        facebookLoginPage.setPassword(config.getProperty(CONFIG_PATH,"password"));
+        facebookLoginPage.setPassword(Library.getProperty(CONFIG_PATH,"password"));
         //    Thread.sleep(2000);
         facebookLoginPage.clickLogin();
         Thread.sleep(3000);
@@ -136,7 +135,6 @@ public class TestFaceBook extends BaseTest {
 
     @Test
     public void testDownLoadingImage() throws InterruptedException, AWTException {
-        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(driver);
         Thread.sleep(2000);
         Robot robot = new Robot();
         robot.mouseMove(484, 325);
@@ -163,7 +161,7 @@ public class TestFaceBook extends BaseTest {
 
     @Test
     public void testAutoInputDate() throws InterruptedException {
-        FacebookDate facebookDate=new FacebookDate(driver);
+        facebookDate=new FacebookDate(driver);
         facebookDate.day();
         facebookDate.month();
         facebookDate.year();
