@@ -14,11 +14,9 @@ public class AlertHandle {
         System.setProperty(CHROME_KEY, CHROME_VALUE);
         WebDriver driver = new ChromeDriver();
 
-
         // Alert Message handling
 
         driver.get("http://demo.guru99.com/test/delete_customer.php");
-
 
         driver.findElement(By.name("cusid")).sendKeys("53920");
         driver.findElement(By.name("submit")).submit();
